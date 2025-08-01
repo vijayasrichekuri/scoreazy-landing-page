@@ -4,10 +4,15 @@
   <meta charset="UTF-8">
   <title>Confidence Building for Grades 3–5</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       background-color: #f0f8ff;
     }
 
@@ -23,6 +28,18 @@
     .hero-text {
       flex: 1;
       min-width: 300px;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .hero-text h1 {
@@ -53,11 +70,12 @@
       border-radius: 5px;
       text-decoration: none;
       font-weight: bold;
-      transition: background-color 0.3s;
+      transition: background-color 0.3s, transform 0.3s;
     }
 
     .cta-button:hover {
       background-color: #0041a3;
+      transform: scale(1.05);
     }
 
     .hero-image {
